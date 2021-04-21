@@ -3,17 +3,19 @@ import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
 
 const LoginScreen = ({ history }) => {
-    const { dispatch } = useContext( AuthContext );
-    
+    const { dispatch } = useContext(AuthContext);
+
     const handleClick = () => {
+        const lastPath = localStorage.getItem('lastPath') || '/';
+
         dispatch({
             type: types.login,
             payload: {
                 name: 'Dario'
             }
         });
-        
-        history.replace('/');  //remplaza la entrada actual y redirecciona.
+
+        history.replace(lastPath);  //remplaza la entrada actual y redirecciona.
         //history.push('path'); empuja una nueva entrada y redirecciona.
     };
 
@@ -22,7 +24,7 @@ const LoginScreen = ({ history }) => {
     return (
         <div className='container mt-5'>
             <h1>Login</h1>
-            <hr className='hr-page'/>
+            <hr className='hr-page' />
             <button
                 className='btn btn-primary'
                 onClick={handleClick}
