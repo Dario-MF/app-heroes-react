@@ -1,0 +1,21 @@
+
+
+h3{
+    color: var(--main-font-color);
+}
+h5{
+    color: var(--main-font-color);
+    margin-top: 1em;
+}
+p{
+    color: var(--main-font-color);
+}
+.list-group-item{
+    color: var(--main-font-color);
+    border-color: var(--main-font-color); 
+    background-color:rgba(255, 255, 255, 0);
+    margin-top: 1em;
+}
+.img-fluid {
+    filter: brightness(70%);
+}
