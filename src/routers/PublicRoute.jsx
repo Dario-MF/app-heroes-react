@@ -9,10 +9,10 @@ const PublicRoute = ({
 }) => {
     return (
         <Route {...rest}
-            component={ (props) => (
-                ( !isAuthenticated )
-                    ? ( <Component { ...props } /> )
-                    : ( <Redirect to='/' /> )
+            component={(props) => (
+                (!isAuthenticated)
+                    ? (<Component {...props} />)
+                    : (<Redirect to='/' />)
             )}
         />
     );
